@@ -1,0 +1,163 @@
+@import url("./syntax.css");
+
+:root {
+  font-variant-ligatures: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15.79% 96.27%;
+    --foreground: 290 65% 3%;
+    --muted: 110 20% 92%;
+    --muted-foreground: 110 2% 33%;
+    --popover: 290 36% 100%;
+    --popover-foreground: 290 65% 3%;
+    --card: 290 36% 100%;
+    --card-foreground: 290 65% 3%;
+    --border: 290 13% 92%;
+    --input: 290 13% 92%;
+    --primary: 351.69 71.55% 45.49%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217.3 43.53% 33.33%;
+    --secondary-foreground: 110 0% 100%;
+    --accent: 39 63.64% 56.86%;
+    --accent-foreground: 110 0% 100%;
+    --destructive: 15.53 73.28% 54.51%;
+    --destructive-foreground: 12 88% 90%;
+    --ring: 290 87% 57%;
+    --chart-1: 290 87% 57%;
+    --chart-2: 110 87% 57%;
+    --chart-3: 110 87% 57%;
+    --chart-4: 110 87% 60%;
+    --chart-5: 290 90% 57%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 290 0% 3.08%;
+    --foreground: 290 37% 97%;
+    --muted: 110 20% 8%;
+    --muted-foreground: 110 2% 67%;
+    --popover: 290 40% 1%;
+    --popover-foreground: 290 37% 97%;
+    --card: 290 40% 1%;
+    --card-foreground: 290 37% 97%;
+    --border: 290 13% 14%;
+    --input: 290 13% 14%;
+    --primary: 351.69 71.55% 45.49%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217.3 43.53% 33.33%;
+    --secondary-foreground: 110 0% 100%;
+    --accent: 39 63.64% 56.86%;
+    --accent-foreground: 110 0% 100%;
+    --destructive: 12 88% 47%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 290 87% 57%;
+    --chart-1: 290 87% 57%;
+    --chart-2: 110 87% 57%;
+    --chart-3: 110 87% 57%;
+    --chart-4: 110 87% 60%;
+    --chart-5: 290 90% 57%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.prose {
+  margin: 0 !important;
+}
+
+pre {
+  padding: 2px 0 !important;
+  width: inherit !important;
+  overflow-x: auto;
+}
+
+pre > code {
+  display: grid;
+  max-width: inherit !important;
+  padding: 14px 0 !important;
+}
+
+.code-line {
+  padding: 0.75px 16px;
+  @apply border-l-2 border-transparent;
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  margin-right: 22px;
+  margin-left: -2px;
+  color: rgb(110, 110, 110);
+  content: attr(line);
+  font-size: 13.5px;
+  text-align: right;
+}
+
+.highlight-line {
+  @apply bg-primary/5 border-l-2 border-primary/30;
+}
+
+.rehype-code-title {
+  @apply px-2 -mb-8 w-full text-sm pb-5 font-medium mt-5 font-code;
+}
+
+.highlight-comp > code {
+  background-color: transparent !important;
+}
+
+/* Global Custom Scrollbar */
+:root {
+  --scrollbar-thumb: rgba(
+    113,
+    113,
+    122,
+    0.6
+  ); /* Subtle dark gray for light mode thumb */
+}
+
+[data-theme="dark"],
+[class*="dark"] {
+  --scrollbar-thumb: rgba(
+    160,
+    160,
+    160,
+    0.4
+  ); /* Softer gray for dark mode thumb */
+}
+
+/* Apply globally */
+* {
+  scrollbar-width: thin; /* Firefox thin scrollbar */
+  scrollbar-color: var(--scrollbar-thumb) transparent; /* Thumb color with transparent track */
+}
+
+*::-webkit-scrollbar {
+  width: 8px; /* Vertical scrollbar width */
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb); /* Thumb color */
+  border-radius: 9999px; /* Fully rounded thumb */
+  border: 2px solid transparent; /* Thin padding effect */
+  background-clip: content-box; /* Smooth thumb edges */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track */
+}

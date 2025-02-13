@@ -1,0 +1,80 @@
+/* halloween */
+/* Light Mode */
+.keyword {
+  color: #d97706;
+  /* Pumpkin Orange */
+}
+
+.function {
+  color: #9333ea;
+  /* Mystic Purple */
+}
+
+.punctuation {
+  color: #4b5563;
+  /* Dark Gray */
+}
+
+.comment {
+  color: #6b7280;
+  /* Muted Gray */
+}
+
+.string,
+.constant,
+.annotation,
+.boolean,
+.number {
+  color: #f59e0b;
+  /* Witch’s Brew Amber */
+}
+
+.tag {
+  color: #c026d3;
+  /* Magenta Potion */
+}
+
+.attr-name {
+  color: #16a34a;
+  /* Poison Green */
+}
+
+.attr-value {
+  color: #db2777;
+  /* Pink Potion */
+}
+
+/* Dark Mode */
+.dark .keyword {
+  color: #fbbf24;
+  /* Candlelight Yellow */
+}
+
+.dark .function {
+  color: #e879f9;
+  /* Enchanted Magenta */
+}
+
+.dark .string,
+.dark .constant,
+.dark .annotation,
+.dark .boolean,
+.dark .number {
+  color: #f59e0b;
+  /* Glowing Amber */
+}
+
+.dark .tag {
+  color: #f472b6;
+  /* Haunted Pink */
+}
+
+.dark .attr-name {
+  color: #a3e635;
+  /* Toxic Green */
+}
+
+.dark .attr-value {
+  color: #fb7185;
+  /* Blood Moon Pink */
+}
